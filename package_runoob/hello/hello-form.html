@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+<h1>get、post方式提交</h1>
+<form action="/hello-get.py" method="get">
+    站点名称: <input type="text" name="name"> <br/>
+    站点 URL: <input type="text" name="url"/>
+    <input type="submit" value="提交"/>
+</form>
+<h1>提交checkbox、radio</h1>
+<form action="/hello-checkbox-radio.py" method="POST">
+    <input type="checkbox" name="runoob" value="on"/> 菜鸟教程
+    <input type="checkbox" name="google" value="on"/> Google
+    <input type="submit" value="选择站点"/>
+    <hr>
+    <form action="/hello-checkbox-radio.py" method="post" target="_self">
+        <input type="radio" name="site" value="runoob"/> 菜鸟教程
+        <input type="radio" name="site" value="google"/> Google
+        <input type="submit" value="提交"/>
+    </form>
+</form>
+<h1>Upload</h1>
+<form enctype="multipart/form-data" action="/hello-upload.py" method="post">
+    <p>选中文件: <input type="file" name="filename"/></p>
+    <p><input type="submit" value="上传"/></p>
+</form>
+</body>
+</html>
